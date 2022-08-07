@@ -1,0 +1,13 @@
+html * {font-family: sans-serif;}
+
+img {
+    max-width: 30px;
+}
+
+.pepe {font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+ font-size: medium;
+font-style: oblique;}
+
+
+.primerdiv {background-color: blue;}

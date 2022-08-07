@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macros %}
+ {% block title %} 
+    {{ super() }} 
+    Bienvenido {% endblock %}
+{% block content %}
+
+{% if user_ip %}
+    <h1>Hola Nadir</h1>
+{% else %}
+    <a href=" {{ url_for('index') }} "> ir a Inicio</a>
+{% endif %}
+    <ul class = 'pepe'>
+        <li>carlos</li>
+        <li>sabri</li>
+        <li>luis</li>
+    </ul>
+    <div class="primerdiv"><p>Lorem</p></div>
+    
+{% endblock %}
+
+    
