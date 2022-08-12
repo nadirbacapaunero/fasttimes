@@ -1,8 +1,29 @@
+from ensurepip import bootstrap
 from urllib import request
 from flask import Flask, request, make_response, redirect, render_template
+from flask_bs4 import Bootstrap
 
 app = Flask(__name__)
+#inicializamos bootstrap
+bootstrap= Bootstrap(app)
+
+
+
 todos = ['Comprar cafe ','Enviar solicitud ', 'Entregar producto']
+
+
+# creamos la pag error 404 por si un usuario se equivoca al entrar a una pagina
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html', error=error)
+
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('500.html', error=error)
+
+
+
+
 
 @app.route('/')
 def index():
@@ -23,7 +44,6 @@ def hello():
     }
     
     return render_template('hello.html', **context)
-
 
 
 
